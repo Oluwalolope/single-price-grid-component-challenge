@@ -1,0 +1,119 @@
+/* mobile view */
+body {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    background-color: hsl(204, 43%, 93%);
+    font-family: 'Karla', sans-serif;
+}
+.container {
+    display: grid;
+    min-height: 600px;
+    width: 300px;
+    font-weight: 400;
+}
+.cards {
+    padding: 1em;
+    color: white;
+}
+.card--1 {
+    background-color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    
+}
+.card--1 h2 {
+    color: hsl(179, 62%, 43%);
+}
+h2 {
+    font-weight: 700;
+}
+.card--1 h3 {
+    color: hsl(71, 73%, 54%);
+}
+.card--1 p {
+    color: hsl(203, 12%, 59%);
+    line-height: 1.2rem;
+}
+.card--2 {
+    background-color: hsl(179, 62%, 43%);
+}
+.card--2 a {
+    text-decoration: none;
+}
+.card--2 p {
+    padding-bottom: 1em;
+}
+.card--2 h3 {
+    font-size: 2em;
+}
+.card--2 span {
+    font-size: 1rem;
+    color: hsl(210, 2%, 81%);
+}
+.card--3 {
+    background-color: hsl(179, 52%, 62%);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+li {
+    list-style: none;
+    line-height: 1.2rem;
+    color: rgb(235, 232, 232);
+}
+.signup {
+    display: block;
+    background-color: hsl(71, 73%, 54%);
+    color: white;
+    margin: 0 auto;
+    padding: 1rem ;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.199);
+}
+.signup:hover {
+    background-color: hsla(71, 73%, 54%, 0.658);
+    transition-delay: 250ms;
+}
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: .5em;
+}
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: .5em;
+}
+
+/* desktop view */
+@media (min-width: 800px) {
+    .container {
+        width: 800px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .cards {
+        padding: 3em;
+    }
+    .card--1 {
+        grid-column: 1/ span 2;
+        grid-row: 1;
+    }
+    .card--2 {
+        grid-column: 1;
+        grid-row: 2;
+        border-bottom-left-radius: 8px;
+    }
+    .card--2 p {
+        padding-bottom: 4em;
+    }
+    .card--3 {
+        grid-column: 2;
+        grid-row: 2;
+        border-bottom-left-radius: 0;
+    }
+    li {
+        line-height: 1.5625rem;
+        
+    }
+}
